@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="IE=edge">
+  <title>Product Infomation</title>
+  <link rel="stylesheet" href="/b02/css/productinfomation.css">
+</head>
+<body>
+
+  <div class="container">
+    <img id="img" src="">
+    <h2 id="name"></h2>
+    <p id="price"></p>
+
+    <button onclick="addToCart()">Add to Cart</button>
+    <br><br>
+    <button onclick="history.back()">⬅ Back</button>
+  </div>
+
+<script>
+  // Lấy dữ liệu từ localStorage
+  document.getElementById("name").innerText = localStorage.getItem("product_name");
+  document.getElementById("price").innerText = localStorage.getItem("product_price");
+  document.getElementById("img").src = localStorage.getItem("product_img");
+
+  function addToCart() {
+    alert("Added to cart!");
+  }
+  
+
+</script>
+
+</body>
+</html>
